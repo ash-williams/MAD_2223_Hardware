@@ -1,20 +1,17 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { Component } from 'react';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+import GlobalStyling from './src/views/globalStyling';
+import LocationExample from './src/views/location';
+import CameraBasic from './src/views/camera';
+import CameraTakePicture from './src/views/camera-takephoto';
+import CameraSendToServer from './src/views/camera-sendtoserver';
+import DisplayImage from './src/views/display.js';
+
+
+export default class App extends Component {
+  render(){
+    return (
+      <DisplayImage />
+    )
+  }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
